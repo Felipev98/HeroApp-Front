@@ -74,7 +74,6 @@ export default function HeroesPage() {
       setFormData({ name: '', description: '', power: '' });
       setShowCreateModal(false);
     } else {
-      // Mostrar error inmediatamente desde el resultado
       const errorMessage = result.error || 'Error al crear el héroe';
       showErrorToast(errorMessage);
     }
@@ -92,7 +91,6 @@ export default function HeroesPage() {
       setEditingHero(null);
       setShowEditModal(false);
     } else {
-      // Mostrar error inmediatamente desde el resultado
       const errorMessage = result.error || 'Error al actualizar el héroe';
       showErrorToast(errorMessage);
     }
