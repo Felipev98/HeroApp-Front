@@ -1,0 +1,142 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background: #00003d;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.2s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header {
+  padding: 24px 24px 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.content {
+  padding: 24px;
+}
+
+.message {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px 24px;
+  justify-content: flex-end;
+}
+
+.cancelButton {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cancelButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.confirmButton {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #dc3545;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.confirmButton:hover {
+  background: #c82333;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .header {
+    padding: 20px 20px 12px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+    padding: 16px 20px 20px;
+  }
+
+  .cancelButton,
+  .confirmButton {
+    width: 100%;
+  }
+}

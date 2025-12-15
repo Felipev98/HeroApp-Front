@@ -1,0 +1,157 @@
+.heroCard {
+  background: #463301;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 4.6px 9.1px 9.1px #0000005c;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+}
+
+.heroCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.heroHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.heroHeader h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.doneBadge {
+  background: #28a745;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.description {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.power {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+}
+
+.power strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.heroActions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.doneButton {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 150px;
+}
+
+.doneButton:hover:not(:disabled) {
+  background: #218838;
+}
+
+.doneButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.editButton {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 100px;
+}
+
+.editButton:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.editButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.deleteButton {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 100px;
+}
+
+.deleteButton:hover:not(:disabled) {
+  background: #c82333;
+}
+
+.deleteButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .heroCard {
+    padding: 16px;
+  }
+
+  .heroHeader h3 {
+    font-size: 18px;
+  }
+
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .doneButton,
+  .editButton,
+  .deleteButton {
+    width: 100%;
+    min-width: unset;
+  }
+}
