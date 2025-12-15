@@ -230,5 +230,3 @@ import type { Hero, CreateHeroData, User, AuthResponse } from '@/types';
 - **username**: Requerido, mínimo 3 caracteres
 - **email**: Requerido, formato de email válido
 - **password**: Requerido, mínimo 6 caracteres (puede variar según política de Cognito)
-
-ISC
