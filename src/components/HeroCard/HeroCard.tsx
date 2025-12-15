@@ -40,7 +40,7 @@ export default function HeroCard({
             className={styles.doneButton}
             disabled={loading}
           >
-            Marcar como Completado
+            Marcar
           </button>
         )}
         <button
